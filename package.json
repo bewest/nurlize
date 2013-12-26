@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/bewest/urlize/issues"
   },
-  "homepage": "https://github.com/bewest/urlize"
+  "homepage": "https://github.com/bewest/urlize",
+  "dependencies": {
+    "should": "~2.1.1",
+    "mocha": "~1.16.2"
+  }
 }
