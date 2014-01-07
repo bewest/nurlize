@@ -9,6 +9,8 @@ The **function** it creates is called **urlize**.
 ## Install
 [![Build
 Status](https://travis-ci.org/bewest/nurlize.png?branch=master)](https://travis-ci.org/bewest/nurlize)
+[![browser support](https://ci.testling.com/bewest/nurlize.png)](http://ci.testling.com/bewest/nurlize)
+
 ```bash
 npm install nurlize
 ```
