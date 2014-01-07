@@ -7,13 +7,14 @@ The name **`nurlize`** refers to this npm module, **nurlize**.
 The **function** it creates is called **urlize**.
 
 ## Install
+```bash
+npm install nurlize
+```
+### Status
 [![Build
 Status](https://travis-ci.org/bewest/nurlize.png?branch=master)](https://travis-ci.org/bewest/nurlize)
 [![browser support](https://ci.testling.com/bewest/nurlize.png)](http://ci.testling.com/bewest/nurlize)
 
-```bash
-npm install nurlize
-```
 ## Use
 ```javascript
 var urlize = require('nurlize');
