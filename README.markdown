@@ -7,6 +7,8 @@ The name **`nurlize`** refers to this npm module, **nurlize**.
 The **function** it creates is called **urlize**.
 
 ## Install
+[![Build
+Status](https://travis-ci.org/bewest/nurlize.png?branch=master)](https://travis-ci.org/bewest/nurlize)
 ```bash
 npm install nurlize
 ```
