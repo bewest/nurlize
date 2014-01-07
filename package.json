@@ -1,5 +1,5 @@
 {
-  "name": "urlize",
+  "name": "nurlize",
   "version": "0.0.0",
   "description": "normalize urls",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/bewest/urlize.git"
+    "url": "git://github.com/bewest/nurlize.git"
   },
   "keywords": [
     "urls"
@@ -16,10 +16,15 @@
   "author": "Ben West",
   "license": "BSD-2",
   "bugs": {
-    "url": "https://github.com/bewest/urlize/issues"
+    "url": "https://github.com/bewest/nurlize/issues"
   },
-  "homepage": "https://github.com/bewest/urlize",
+  "homepage": "https://github.com/bewest/nurlize",
   "dependencies": {
+    "should": "~2.1.1",
+    "mocha": "~1.16.2",
+    "qs": "~0.6.6"
+  },
+  "devDependencies": {
     "should": "~2.1.1",
     "mocha": "~1.16.2"
   }
