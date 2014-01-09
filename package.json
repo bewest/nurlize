@@ -4,7 +4,7 @@
   "description": "normalize urls",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/*.js"
+    "test": "node_modules/.bin/mocha test/*.js"
   },
   "repository": {
     "type": "git",
@@ -30,7 +30,7 @@
         "firefox/15", "chrome/22", "opera/12", "safari/5.1"
     ],
     "harness" : "mocha",
-    "files": "test/test_*.js"
+    "files": "test/*.js"
   },
   "devDependencies": {
     "should": "~2.1.1",
