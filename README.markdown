@@ -10,6 +10,7 @@ The **function** it creates is called **urlize**.
 ```bash
 npm install nurlize
 ```
+
 ### Status
 [![Build
 Status](https://travis-ci.org/bewest/nurlize.png?branch=master)](https://travis-ci.org/bewest/nurlize)
