@@ -9,9 +9,12 @@ describe("urlize", function ( ) {
   });
   describe('should create urls', function ( ) {
     var urlize = require('../');
-    it('given a base url', function (done) {
+    describe('given a base url', function ( ) {
       var base = urlize('http', 'example.com', 'base');
-      base.should.equal('http://example.com/base');
+      it('should generate a base url', function (done) {
+        base.should.equal('http://example.com/base');
+        done( );
+      });
       describe('base should also have urlize', function ( ) {
         it('should work with relative paths', function (done) {
           var bop = base.urlize('foo/bar', 'baz', 'bop')
@@ -29,7 +32,7 @@ describe("urlize", function ( ) {
           rehost.should.equal('https://rehost.io/another/base');
           done( );
         });
-        done( );
+
       });
     });
   });
