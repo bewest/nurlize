@@ -21,8 +21,7 @@
   "homepage": "https://github.com/bewest/nurlize",
   "dependencies": {
     "should": "~2.1.1",
-    "mocha": "~1.16.2",
-    "qs": "~0.6.6"
+    "mocha": "~1.16.2"
   },
   "testling": {
     "browsers": [
@@ -30,7 +29,7 @@
         "firefox/15", "chrome/22", "opera/12", "safari/5.1"
     ],
     "harness" : "mocha",
-    "files": "test/*.js"
+    "files": "test/test_*.js"
   },
   "devDependencies": {
     "should": "~2.1.1",
