@@ -1,4 +1,3 @@
-
 # nurlize
 
 **N**ormalize **urls**.
@@ -14,6 +13,7 @@ npm install nurlize
 [![Build
 Status](https://travis-ci.org/bewest/nurlize.png?branch=master)](https://travis-ci.org/bewest/nurlize)
 [![browser support](https://ci.testling.com/bewest/nurlize.png)](http://ci.testling.com/bewest/nurlize)
+[![Coverage Status](https://coveralls.io/repos/bewest/nurlize/badge.png)](https://coveralls.io/r/bewest/nurlize)
 
 ## Use
 ```javascript
