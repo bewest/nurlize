@@ -1,6 +1,6 @@
 {
   "name": "nurlize",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "normalize urls",
   "main": "index.js",
   "scripts": {
@@ -20,14 +20,14 @@
   },
   "homepage": "https://github.com/bewest/nurlize",
   "dependencies": {},
-    "config": {
-      "blanket": {
-        "pattern": "index"
-      },
-      "travis-cov": {
-        "threshold": 90
-      }
+  "config": {
+    "blanket": {
+      "pattern": "index"
     },
+    "travis-cov": {
+      "threshold": 90
+    }
+  },
   "testling": {
     "harness": "mocha",
     "browsers": [
