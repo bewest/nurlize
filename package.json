@@ -20,6 +20,14 @@
   },
   "homepage": "https://github.com/bewest/nurlize",
   "dependencies": {},
+    "config": {
+      "blanket": {
+        "pattern": "index"
+      },
+      "travis-cov": {
+        "threshold": 90
+      }
+    },
   "testling": {
     "harness": "mocha",
     "browsers": [
