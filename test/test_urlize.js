@@ -23,6 +23,7 @@ describe("urlize", function ( ) {
           baz.should.equal('http://example.com/base/foo/bar/baz/index');
           var foo = baz.urlize('../../../index');
           foo.should.equal('http://example.com/base/foo/index');
+          foo.urlize( ).should.equal('http://example.com/base/foo/index');
           var rebase = foo.urlize('../..');
           rebase.should.equal('http://example.com/base');
           done( );

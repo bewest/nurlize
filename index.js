@@ -14,17 +14,15 @@ function urlize (head) {
   if (host) {
     tail.unshift(host);
   }
-  if (base) {
-    return base + ABS + normalize(tail.join(ONE));
-  }
-  return head + ABS + normalize(tail.join(ONE));
+  return base + ABS + normalize(tail.join(ONE));
 }
 
 module.exports = function wrap ( ) {
   var original = urlize.apply(null, arguments);
   var result = new String(original);
-  function quine ( ) {
+  function quine (op) {
     var parts = Array.prototype.slice.call(arguments);
+    if (!op) { parts.unshift(original); }
     if (parts[0].split(ABS).length == 1)
       parts.unshift(original);
     return wrap.apply(null, parts);

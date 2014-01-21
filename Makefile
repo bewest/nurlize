@@ -16,5 +16,4 @@ test:
 
 travis: test travis-cov coveralls coverhtml
 
-
 .PHONY: test
