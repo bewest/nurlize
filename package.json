@@ -19,24 +19,27 @@
     "url": "https://github.com/bewest/nurlize/issues"
   },
   "homepage": "https://github.com/bewest/nurlize",
-  "dependencies": {
-    "should": "~2.1.1",
-    "mocha": "~1.16.2"
-  },
+  "dependencies": {},
   "testling": {
-    "harness" : "mocha",
-    "browsers" : [
-            "ie/6..latest",
-            "chrome/20..latest",
-            "firefox/10..latest",
-            "safari/latest",
-            "opera/11.0..latest",
-            "iphone/6", "ipad/6"
-        ],
+    "harness": "mocha",
+    "browsers": [
+      "ie/6..latest",
+      "chrome/20..latest",
+      "firefox/10..latest",
+      "safari/latest",
+      "opera/11.0..latest",
+      "iphone/6",
+      "ipad/6"
+    ],
     "files": "test/*.js"
   },
   "devDependencies": {
     "should": "~2.1.1",
-    "mocha": "~1.16.2"
+    "mocha": "~1.16.2",
+    "mocha-lcov-reporter": "0.0.1",
+    "travis-cov": "~0.2.4",
+    "blanket": "~1.1.6",
+    "coveralls": "~2.6.1",
+    "browserify": "~3.20.0"
   }
 }
