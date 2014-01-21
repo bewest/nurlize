@@ -4,6 +4,7 @@ var normalize = path.normalize;
 
 var ABS = '://';
 var ONE = '/';
+var DOT = '.';
 
 function join (parts) {
   return parts.join(ONE);
@@ -27,7 +28,7 @@ function urlize (head) {
   var tail = Array.prototype.slice.call(arguments, 1);
   var end = '';
   if (tail.length > 0) { end = normalize(join(tail)); }
-  if (end[0] == '.') { end = ONE + end; };
+  if (end[0] == DOT) { end = ONE + end; };
   return join(valid(head + end));
 }
 
