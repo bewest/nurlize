@@ -3,4 +3,4 @@ language: node_js
 script:
   - echo "Welcome"
   - make travis
-  - echo "do the travis dance"
+  - echo "Do the travis dance!"
