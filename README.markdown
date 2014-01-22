@@ -12,8 +12,9 @@ npm install nurlize
 ### Status
 [![Build
 Status](https://travis-ci.org/bewest/nurlize.png?branch=master)](https://travis-ci.org/bewest/nurlize)
-[![browser support](https://ci.testling.com/bewest/nurlize.png)](http://ci.testling.com/bewest/nurlize)
 [![Coverage Status](https://coveralls.io/repos/bewest/nurlize/badge.png)](https://coveralls.io/r/bewest/nurlize)
+
+[![browser support](https://ci.testling.com/bewest/nurlize.png)](http://ci.testling.com/bewest/nurlize)
 
 ## Use
 ```javascript
