@@ -7,7 +7,7 @@ if (!module.parent) {
   console.log('bop', bop.toString( ));
   console.log('bop()', bop.urlize( ).toString( ));
   console.log('bop(/)', bop.urlize('/').toString( ));
-  var baz = bop.urlize('../index')
+  var baz = bop.urlize('/path/bazz/new/base')
   console.log('baz', baz.toString( ));
   var foo = baz.urlize('../../../index');
   console.log('foo', foo.toString( ));

@@ -21,7 +21,7 @@ var urlize = require('nurlize');
 var base = urlize('http', 'example.com', 'base');
 // 'http://example.com/base'
 var bop = base.urlize('foo/bar', 'baz', 'bop')
-// 'http://example.com/base/foo/bar/baz/bop'
+// 'http://example.com/basefoo/bar/baz/bop'
 ```
 
 ## `urlize(base, [...]) -> url`
@@ -39,32 +39,35 @@ url relative to that base url.  Results curried using `url.urlize` will
 
 ### Example
 ```javascript
-var urlize = require('nurlize');
+var urlize = require('../');
 
 if (!module.parent) {
-  var base = urlize('http', 'example.com', 'base');
-  console.log('base', base);
+  var base = urlize('http://', 'example.com', 'base');
+  console.log('base', base.toString( ));
   var bop = base.urlize('foo/bar', 'baz', 'bop')
-  console.log('bop', bop);
-  var baz = bop.urlize('../index')
-  console.log('baz', baz);
+  console.log('bop', bop.toString( ));
+  console.log('bop()', bop.urlize( ).toString( ));
+  console.log('bop(/)', bop.urlize('/').toString( ));
+  var baz = bop.urlize('/path/bazz/new/base')
+  console.log('baz', baz.toString( ));
   var foo = baz.urlize('../../../index');
-  console.log('foo', foo);
+  console.log('foo', foo.toString( ));
   var rebase = foo.urlize('../..');
-  console.log('rebase', rebase);
+  console.log('rebase', rebase.toString( ));
   var rehost = foo.urlize('https://rehost.io/another/base');
-  console.log('rehost', rehost);
+  console.log('rehost', rehost.toString( ));
 
 }
 
 ```
 
 ```bash
-+ node test/example.js
 base http://example.com/base
-bop http://example.com/base/foo/bar/baz/bop
-baz http://example.com/base/foo/bar/baz/index
-foo http://example.com/base/foo/index
-rebase http://example.com/base
+bop http://example.com/basefoo/bar/baz/bop
+bop() http://example.com/basefoo/bar/baz/bop
+bop(/) http://example.com/
+baz http://example.com/path/bazz/new/base
+foo http://example.com/path/index
+rebase http://example.com/.
 rehost https://rehost.io/another/base
 ```
