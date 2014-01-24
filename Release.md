@@ -1,5 +1,5 @@
 
-v0.1.2 / 2014-01-24
+v0.1.3 / 2014-01-24
 ==================
 
- * tweak markdown
+ * add tool to prep releases
