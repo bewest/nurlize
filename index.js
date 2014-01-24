@@ -16,12 +16,12 @@ function valid (url) {
   var tail = schemes.shift( );
   var parts = (tail || '').split(ONE);
   var host = parts.shift( );
-  var begin = base + ABS + host;
+  var begin = base + ABS;
   var end = normalize(join(parts));
   if (parts.length == 1) {
     end = parts[0];
   }
-  return [begin, end];
+  return [begin, host, end];
 }
 
 function urlize (head) {
@@ -29,15 +29,19 @@ function urlize (head) {
   var end = '';
   if (tail.length > 0) { end = normalize(join(tail)); }
   if (end[0] == DOT) { end = ONE + end; };
-  return join(valid(head + end));
+  var parts = valid(head + end);
+  head = parts.shift( );
+  end = parts;
+  return head + join(end);
 }
 
-module.exports = function wrap ( ) {
+function wrap ( ) {
   var original = urlize.apply(null, arguments);
   var result = new String(original);
   function base ( ) {
-    var r = valid(original.toString( )).shift( );
-    return r;
+    var r = valid(original.toString( ))
+    r.pop( );
+    return r.join('');
   }
   function quine (op) {
     var parts = Array.prototype.slice.call(arguments);
@@ -51,3 +55,7 @@ module.exports = function wrap ( ) {
   result.urlize = quine;
   return result;
 }
+module.exports = wrap;
+module.exports.valid = valid;
+module.exports.urlize = urlize;
+module.exports.join = join;
