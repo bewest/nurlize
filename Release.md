@@ -1,7 +1,8 @@
 
-v0.1.4 / 2014-01-24
+v0.1.5 / 2014-01-24
 ==================
 
-This should make it easier to modify base urls and schemes.
-
- * expose internals of nurlize, modify how valid works
+Suss out expected library behavior.
+ * Merge branch 'release/v0.1.4'
+ * 0.1.4
+ * Add more tests
