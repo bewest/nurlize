@@ -1,5 +1,7 @@
 
-v0.1.3 / 2014-01-24
+v0.1.4 / 2014-01-24
 ==================
 
- * add tool to prep releases
+This should make it easier to modify base urls and schemes.
+
+ * expose internals of nurlize, modify how valid works
