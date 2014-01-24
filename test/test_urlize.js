@@ -35,6 +35,37 @@ describe("urlize", function ( ) {
         it('should switch hosts', function (done) {
           var rehost = base.urlize('https://rehost.io/another/base');
           rehost.should.equal('https://rehost.io/another/base');
+          var rescheme = base.urlize('hakken://AAAA/another/base');
+          rescheme.should.equal('hakken://AAAA/another/base');
+          rescheme = rescheme.urlize('/AAAA');
+          rescheme.should.equal('hakken://AAAA/AAAA');
+          rescheme = rescheme.urlize('foo');
+          rescheme.should.equal('hakken://AAAA/AAAAfoo');
+          rescheme = rescheme.urlize('hakken://AAAA/BB/');
+          rescheme.should.equal('hakken://AAAA/BB/');
+          rescheme = rescheme.urlize('./CCC/DDD');
+          rescheme.should.equal('hakken://AAAA/BB/CCC/DDD');
+          rescheme = rescheme.urlize('../foo');
+          rescheme.should.equal('hakken://AAAA/BB/CCC/foo');
+          rescheme = rescheme.urlize('../');
+          rescheme.should.equal('hakken://AAAA/BB/CCC/');
+          rescheme = rescheme.urlize('../');
+          rescheme.should.equal('hakken://AAAA/BB/');
+          rescheme = rescheme.urlize('../');
+          // this may or may not be reasonable
+          rescheme.should.equal('hakken://AAAA/./');
+          rescheme = rescheme.urlize('../');
+          // this is downright silly
+          rescheme.should.equal('hakken://AAAA/../');
+          rescheme = rescheme.urlize('../');
+          // ok, this is beyond silly, and is kind of ridiculous
+          rescheme.should.equal('hakken://AAAA/../../');
+
+          var valid = urlize.valid('hakken://AAAA/BB/');
+          var p = valid.pop( );
+          var S = valid.shift( );
+          rescheme = rescheme.urlize(S, 'BBBB', p);
+          rescheme.should.equal('hakken://BBBB/BB/');
           done( );
         });
 
