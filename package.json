@@ -1,6 +1,6 @@
 {
   "name": "nurlize",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "normalize urls",
   "main": "index.js",
   "scripts": {
