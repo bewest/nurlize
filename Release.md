@@ -1,5 +1,5 @@
 
-v0.1.1 / 2014-01-21
+v0.1.2 / 2014-01-24
 ==================
 
- * tweak readme and example
+ * tweak markdown
